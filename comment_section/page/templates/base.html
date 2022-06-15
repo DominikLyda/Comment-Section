@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block head %}
+    <meta charset="UTF-8">
+    <title>Comment Section</title>
+    {% block style %}
+    <link rel="stylesheet" href="../static/CSS/base.css">
+    {% endblock %}
+    {% endblock %}
+</head>
+<body>
+    <h1 class="page-name">Comment Section</h1>
+    <div class="menu-position">
+    <a class="menu list" href="http://127.0.0.1:8000/podcasty/" >podcasty</a>
+    <a class="menu account" href="http://127.0.0.1:8000/account" >konto</a>
+    {% if user.is_authenticated %}
+    <a class="menu logout" href="http://127.0.0.1:8000/logout">wyloguj</a>
+    {% else %}
+    <a class="menu login" href="http://127.0.0.1:8000/login">zaloguj</a>
+    {% endif %}
+    {% if user.is_superuser %}
+    <a class="menu login add-podcast" href="http://127.0.0.1:8000/dodaj_podcast/">dodaj podcast</a>
+    {% endif %}
+    </div>
+    {% if user.is_authenticated %}
+    <a class="logged-user">Witaj {{user.username}} !</a>
+    {% endif %}
+    <div id="content">{% block content %}{% endblock %}</div>
+</body>
+</html>

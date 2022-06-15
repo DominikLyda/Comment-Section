@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% load page_extras %}
+{% block content %}
+<div class="podcasts-list">
+  <div class="comment-podcast">
+    <p class="comment-podcast-name">"{{podcast.name}}"</p>
+    <p class="comment-podcast-autor">{{podcast.author}}</p>
+    <p class="comment-podcast-description">{{podcast.description}}</p>
+  </div>
+</div>
+  <div class="add-comment">
+    <form class="comment-form" action="" method="post">
+      {% csrf_token %}
+      {{form.as_p}}
+      <div class="add-comment-button"><input type="submit" value="Skomentuj"></div>
+    </form>
+  </div>
+<div class="comment-list-possition">
+  <div class="comment-list">
+    {% for comment in comments %}
+    <div class="comment">
+      <a class="comment-user">{{comment.user}}:</a>
+      <a class="comment-text">{{comment.text}}</a>
+      <a class="reaction">Like: {{ comment|like }} | Dislike: {{ comment|dislike }} </a>
+      {% if user == comment.user %}
+      <a class="reaction delete-comment" href="http://127.0.0.1:8000/delete/{{comment.id}}">Usuń Komentarz</a>
+      {% endif %}
+    </div>
+    {% endfor %}
+  <p class="comment-list-label">Komentarze:</p>
+  </div>
+</div>
+{% endblock %}

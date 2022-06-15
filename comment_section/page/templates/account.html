@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="account-position">
+    <div class="account-info">
+        <p><strong>Użytkownik:</strong> {{user.username}}</p>
+        <p><strong>E-mail:</strong> {{user.email}}</p>
+        <p><strong>Ilość komentarzy:</strong> {{comments.count}}</p>
+    </div>
+</div>
+<div class="comment-list-possition">
+    <div class="comment-list">
+        {% for comment in comments %}
+        <div class="comment account-comment">
+        <a>{{comment.text}}</a>
+        <a class="reaction delete-comment" href="http://127.0.0.1:8000/delete/{{comment.id}}">Usuń Komentarz</a>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

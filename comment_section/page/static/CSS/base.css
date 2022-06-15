@@ -1,0 +1,235 @@
+.page-name{
+    display: flex;
+    justify-content: center;
+    font-family: 'Avenir', Helvetica, sans-serif;
+    font-size: 52px;
+    margin-bottom: 17px;
+}
+.menu{
+    display: inline-block;
+    font-family: 'Avenir', Helvetica, sans-serif;
+    font-weight: bold;
+    background-color: lavender;
+    width: fit-content;
+    height: fit-content;
+    padding: 5px;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin: 3px;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+
+}
+.menu-position{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.logged-user{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-family: 'Avenir', Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: small;
+    margin-top: 17px;
+}
+.podcasts-list{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    border-top: 3px;
+    border-top-color: black;
+    border-top-style: solid;
+    border-bottom: 3px;
+    border-bottom-color: black;
+    border-bottom-style: solid;
+    margin-top: 20px;
+    background-color: lightgray;
+    flex-flow: wrap;
+
+}
+.podcast{
+    display: inline-block;
+    font-family: 'Avenir', Helvetica, sans-serif;
+    background-color: lightcyan;
+    width: fit-content;
+    height: fit-content;
+    padding: 5px;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin: 3px;
+    cursor: pointer;
+    transition: top 0.2ms;
+    transform-style: flat;
+    position: relative;
+}
+.podcast-name{
+    font-size: large;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+}
+.podcast-autor{
+    display: flex;
+    font-style: italic;
+    justify-content: center;
+}
+.link-spanner{
+    position:absolute;
+    width:100%;
+    height:100%;
+    top:0;
+    left: 0;
+    z-index: 1;
+}
+.comment-podcast{
+    font-family: 'Avenir', Helvetica, sans-serif;
+}
+.comment-podcast-name{
+    display: flex;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: bolder;
+}
+.comment-podcast-autor{
+    display: flex;
+    justify-content: center;
+    font-size: 15px;
+    font-style: italic;
+}
+.comment-podcast-description{
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    width: 400px;
+    height: fit-content;
+    border-radius: 10px;
+    padding: 5px;
+    border: 1px darkcyan solid;
+}
+.comment-list{
+    display: flex;
+    align-content: center;
+    width: 700px;
+    flex-direction: column-reverse;
+    font-family: 'Avenir', Helvetica, sans-serif;
+}
+.comment-list-label{
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+.comment-list-possition{
+    display: flex;
+    justify-content: center;
+}
+.comment{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: available;
+    height: fit-content;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 1px;
+    border: 1px darkgray solid;
+}
+.comment-user{
+    font-weight: Bold;
+    font-size: 14px;
+    margin: 5px;
+}
+.comment-text{
+    margin: 5px;
+}
+.reaction{
+    font-size: 8px;
+    font-weight: bold;
+    margin: 5px;
+}
+.add-comment{
+    display: flex;
+    justify-content: center;
+}
+.add-comment-button{
+    display: flex;
+    justify-content: center;
+}
+.comment-form{
+    font-family: 'Avenir', Helvetica, sans-serif;
+
+}
+input[type=submit]{
+    font-family: 'Avenir', Helvetica, sans-serif;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    margin-top: -10px;
+}
+#id_comment{
+    display: flex;
+    justify-content: center;
+    font-family: 'Avenir', Helvetica, sans-serif;
+    width: 650px;
+    height: 100px;
+}
+.account-position{
+    display: flex;
+    justify-content: center;
+    font-family: 'Avenir', Helvetica, sans-serif;
+}
+.account-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px 10px 5px 10px;
+    border: 2px black solid;
+    border-radius: 10px;
+    margin-bottom: 17px;
+    background-color: lavender;
+    margin-top: 17px;
+}
+.add-podcast{
+    background: rgb(255,127,127);
+    background: linear-gradient(90deg, rgba(255,127,127,1) 0%, rgba(255,135,196,1) 35%, rgba(161,191,255,1) 100%);
+}
+.add-podcast-form{
+    height: fit-content;
+    width: fit-content;
+    padding: 5px 10px 5px 10px;
+    border: 2px black solid;
+    border-radius: 10px;
+}
+.delete-comment{
+    width: fit-content;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+    border: 1px black solid;
+    padding: 1px;
+    border-radius: 5px;
+    background-color: darkgray;
+}
+.delete-ask{
+    display: flex;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+    margin: 10px;
+    font-family: 'Avenir', Helvetica, sans-serif;
+    border: 2px black solid;
+    border-radius: 10px;
+    background: crimson;
+}
+.delete-ask-question{
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+    padding: 20px;
+}
+.account-comment{
+    display: inline;
+}

@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="account-position">
+    <div class="add-comment add-podcast add-podcast-form">
+        <form class="comment-form" action="" method="post">
+            {% csrf_token %}
+            {{form.as_p}}
+            <div class="add-comment-button"><input type="submit" value="Dodaj podcast!"></div>
+        </form>
+    </div>
+</div>
+{% endblock %}

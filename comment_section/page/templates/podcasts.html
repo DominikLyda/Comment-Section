@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+  <div class="podcasts-list">
+  {% for podcast in podcast_list %}
+  <div class="podcast">
+    <p class="podcast-name">"{{podcast.name}}"</p>
+    <p class="podcast-autor">{{podcast.author}}</p>
+    <a href="http://127.0.0.1:8000/podcasty/{{podcast.id}}"><span class="link-spanner"></span></a>
+  </div>
+  {% endfor %}
+  </div>
+{% endblock %}

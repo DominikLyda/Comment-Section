@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="delete-ask">
+    <a class="delete-ask-question">Czy na pewno chcesz usunąć komentarz ?</a>
+    <form action="/delete/{{comment.id}}" method="post">
+        {% csrf_token %}
+        <input type="submit" value="Potwierdź usunięcie">
+    </form>
+</div>
+{% endblock %}
